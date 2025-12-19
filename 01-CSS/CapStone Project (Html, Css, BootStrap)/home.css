@@ -1,0 +1,149 @@
+/* .imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .poiret-one-regular {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .londrina-sketch-regular {
+  font-family: "Londrina Sketch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+ */
+
+/* .faster-one-regular {
+  font-family: "Faster One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .bungee-outline-regular {
+  font-family: "Bungee Outline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poiret One", sans-serif;
+}
+
+body {
+  background-color: #e8f1f7;
+  color: #2f2f2f;
+}
+
+.hero {
+  background-color: #f4d1ae;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 90px auto;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  background-attachment: fixed;
+}
+
+.logoContain {
+  width: 50vw;
+  font-size: 3.5rem;
+  display: flex-end;
+  /* border: 2px solid black; */
+}
+
+.logo {
+  font-family: "Bungee Outline", sans-serif;
+  padding-left: 20px;
+}
+
+.navbar {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  box-shadow: 0px -2px 10px 2px black;
+  /* border-bottom: 5px solid; */
+  /* border-image: linear-gradient(
+      to right,
+      #236b8e 0%,
+      #236b8e 10%,
+      #567a4f 10%,
+      #567a4f 20%,
+      #b3522e 20%,
+      #871d0a 100%
+    )
+    1;
+  transition: all 0.25s ease-in-out; */
+  /* background-attachment: fixed; */
+}
+/* 
+.navbar:hover {
+  border-image: linear-gradient(
+      to right,
+      #236b8e 0%,
+      #236b8e 80%,
+      #567a4f 80%,
+      #567a4f 90%,
+      #871d0a 90%,
+      #871d0a 100%
+    )
+    1;
+} */
+
+.rest {
+  display: flex;
+  font-weight: bolder;
+  width: 50vw;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+
+.Me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hi {
+  font-size: 3rem;
+}
+
+.name {
+  font-family: "Bungee Outline", sans-serif;
+  font-size: 4rem;
+}
+
+.testimonies {
+  height: 100vh;
+}
+
+.footer {
+  height: 30vh;
+  background-color: #2f2f2f1e;
+}
+
+.ii {
+  font-size: 1.5rem;
+}
+
+.picArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.pic img {
+  height: 88.5vh;
+  text-shadow: -1px -2px 2px 2px black;
+}

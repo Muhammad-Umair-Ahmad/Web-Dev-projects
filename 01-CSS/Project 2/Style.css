@@ -1,0 +1,220 @@
+html {
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* ✅ Added for consistent layout with padding/margins */
+}
+
+nav {
+  color: orange;
+  font-size: 4rem;
+  font-style: italic;
+  margin: 40px;
+}
+
+.full {
+  opacity: 0;
+}
+
+.mid {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 40px;
+  padding-bottom: 10px;
+}
+
+.mid .first {
+  display: inline;
+  padding-bottom: 10px;
+}
+.mid .second {
+  display: inline;
+  color: midnightblue;
+  padding-bottom: 10px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.beauty {
+  display: inline-block;
+  width: 49%;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.construction {
+  display: inline-block;
+  width: 49%;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 10px 0;
+}
+
+.text {
+  padding: 10px;
+  height: auto;
+}
+
+.pic img {
+  width: 30%;
+  float: left;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  padding: 10px 20px;
+  color: midnightblue;
+  background: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 10px;
+    margin: 10px;
+  }
+
+  nav {
+    text-align: center;
+    font-size: 3rem; /* ✅ Reduced font size for better mobile scaling */
+    margin: 20px;
+  }
+
+  .mid {
+    background-color: midnightblue;
+    padding: 20px 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* ❗️FIXED: corrected selector from 'mid .first' to '.mid .first'
+     ✍️ Reason: 'mid' is not a valid element, '.mid' is a class selector */
+  .mid .first,
+  .mid .second,
+  .mid .third {
+    display: none;
+  }
+
+  .full {
+    color: white;
+    opacity: 1; /* ✅ FIXED: changed from '100' to '1'
+                   ✍️ Reason: opacity must be between 0 (invisible) and 1 (fully visible) */
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 20px; /* ✅ Added spacing between stacked sections */
+  }
+
+  .beauty,
+  .construction {
+    width: 100%;
+    padding: 10px;
+    display: block; /* ✅ Ensures vertical stacking works even without flex parent */
+  }
+
+  .pic img {
+    width: 100%;
+    float: none; /* ✅ Float removed for proper mobile scaling */
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    position: static; /* ✅ Changed from fixed for mobile usability */
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1024px) {
+  html {
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  nav {
+    position: sticky;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    font-size: 3rem; /* ✅ Reduced font size for better mobile scaling */
+    padding: 20px 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .mid {
+    position: sticky;
+    padding: 20px 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* ❗️FIXED: corrected selector from 'mid .first' to '.mid .first'
+     ✍️ Reason: 'mid' is not a valid element, '.mid' is a class selector */
+  .mid .first,
+  .mid .second,
+  .mid .third {
+    display: none;
+  }
+
+  .full {
+    color: midnightblue;
+    opacity: 1; /* ✅ FIXED: changed from '100' to '1'
+                   ✍️ Reason: opacity must be between 0 (invisible) and 1 (fully visible) */
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 20px; /* ✅ Added spacing between stacked sections */
+  }
+
+  .beauty,
+  .construction {
+    width: 100%;
+    padding: 10px;
+    display: block; /* ✅ Ensures vertical stacking works even without flex parent */
+  }
+
+  .pic img {
+    width: 80%;
+    display: block; /* ✅ Makes it a block-level element */
+    margin: 0 auto 10px; /* ✅ Horizontally centers the image */
+    float: none; /* ✅ Remove float for clean layout */
+    padding: 0;
+  }
+
+  footer {
+    position: static; /* ✅ Changed from fixed for mobile usability */
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --bord: 2px solid red;
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .navbar {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            height: 110px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            overflow: auto;
+            justify-content: space-around;
+            padding: 0 30px;
+            box-shadow: black 0px 2px 5px;
+            border-bottom: white 5px solid;
+        }
+        
+        .footer {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            height: 110px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            border-top: white 5px solid;
+            box-shadow: black 0px -2px 5px;
+        }
+        
+        .logo {
+            color: white;
+            overflow: auto;
+            align-self: center;
+            font-size: 60px;
+            padding: 20px;
+            font-family: "Quintessential", serif;
+            transition: all .5s;
+        }
+        
+        .logo:hover {
+            background: linear-gradient(270deg, #ff7272, #ffd4a2);
+            background-size: 500% 500%;
+            animation: gradientMove 2s linear infinite;
+            border: white solid 4px;
+            color: white;
+            box-shadow: black 2px 2px 10px;
+            transform: rotate(25deg);
+            transform: skew(-15deg);
+        }
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 500%;
+            }
+            50% {
+                background-position: 100% 500%;
+            }
+            100% {
+                background-position: 0% 500%;
+            }
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .subtxt {
+            padding: 20px;
+            font-weight: bold;
+            width: 700px;
+            font-weight: 100;
+            display: flex;
+            font-style: none;
+            flex-direction: row;
+            font-size: 30px;
+            color: white;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        
+        .home,
+        .contact,
+        .about {
+            transition: all .5s;
+        }
+        
+        .home:hover,
+        .contact:hover,
+        .about:hover {
+            transform: scale(1.25);
+            text-shadow: white 2px 2px 5px;
+            color: black;
+        }
+        
+        .main {
+            background: linear-gradient(to right, #ff7f5fbb, #feb47bc3);
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .center {
+            width: 1300px;
+            height: 98%;
+            border-radius: 30px;
+            background-color: #fae3c6c5;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            box-shadow: black 0px 0px 10px 0px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .recipe {
+            font-family: "Quintessential", serif;
+            font-size: 50px;
+            opacity: 100;
+            color: rgb(255, 132, 0);
+            font-weight: bold;
+            position: relative;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .rec1 {
+            align-self: center;
+            border-radius: 30px;
+            padding: 50px;
+            background-color: #fff2e3;
+            justify-content: space-between;
+            position: relative;
+            width: 80%;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            box-shadow: black 0px 2px 7px;
+            overflow: visible;
+            /* ✨ ADDED to support sticky positioning */
+            min-height: 600px;
+            transition: all ease-in-out .5s;
+            /* ✨ ADDED to ensure enough space for sticky */
+        }
+        
+        .rec1:hover {
+            transform: scale(1.025);
+        }
+        
+        .text {
+            font-family: "Quintessential", serif;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(255, 132, 0);
+        }
+        
+        .rec {
+            padding: 20px;
+            font-size: 30px;
+        }
+        
+        li {
+            padding: 5px;
+        }
+        
+        .co {
+            height: 450px;
+            display: flex;
+            border-radius: 35px;
+            position: sticky;
+            /* ✨ ADDED: Sticky position */
+            top: 20px;
+            /* ✨ ADDED: Offset from top */
+            align-self: flex-start;
+            /* ✨ ADDED: Prevent full height stretching */
+            transition: all ease-in-out 1s;
+        }
+        
+        .co img {
+            height: 450px;
+            border-radius: 50px;
+            padding: 0px;
+            border: rgb(255, 132, 0) solid 7px;
+        }
+        
+        .co:hover {
+            transform: scale(1.08);
+        }
+        
+        .co .overlay:hover {
+            opacity: 100;
+        }
+        
+        .overlay {
+            position: absolute;
+            border-radius: 50px;
+            padding: 0px;
+            border: rgb(227, 117, 0) solid 9px;
+            font-size: 30px;
+            color: rgb(251, 251, 251);
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 95.7%;
+            background-color: rgba(61, 60, 60, 0.743);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all ease-in-out 1s;
+        }
+        /* ✨ ADDED: Responsive Layout Fix for Small Screens */
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            .logo {
+                font-size: 40px;
+                padding: 10px 0;
+            }
+            .subtxt {
+                flex-direction: column;
+                align-items: center;
+                width: auto;
+                font-size: 24px;
+                gap: 10px;
+            }
+            .main {
+                height: auto;
+                padding: 20px 10px;
+            }
+            .center {
+                width: 100%;
+                margin: 20px 0;
+                border-radius: 15px;
+            }
+            .rec1 {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            #img {
+                width: 80%;
+                position: relative;
+                top: 0;
+                margin-top: 20px;
+            }
+            .text {
+                align-items: center;
+            }
+            .title {
+                font-size: 30px;
+                text-align: center;
+            }
+            .rec {
+                font-size: 20px;
+            }
+            .footer {
+                font-size: 20px;
+                height: auto;
+                padding: 20px 10px;
+                text-align: center;
+            }
+        }
+        /* ✨ END OF RESPONSIVE BLOCK */
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">COOKit</div>
+        <div class="subtxt">
+            <div class="home"><a href="#">Home</a></div>
+            <div class="contact"><a href="#">Contact Us</a></div>
+            <div class="about"><a href="#">About Us</a></div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="center">
+            <div class="recipe">Recipes</div>
+
+            <div class="rec1">
+                <div class="text">
+                    <div class="title">Ice Cream</div>
+                    <div class="rec">
+                        <ol>
+                            <li>Whip the cream till it is fluffy.</li>
+                            <li>Cook cocoa powder in milk till mixed completely into a smooth consistency.</li>
+                            <li>Add Nestlé MILKMAID, cooked cocoa powder, vanilla essence, whipped cream & mix well.</li>
+                            <li>Pour into a freezing tray and freeze till half set. Remove and beat with a whisk or electric beater until smooth. Doing so will help keep the texture of the ice cream soft and creamy while it sets.</li>
+                            <li>Pour back into tray and freeze till well set.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="co">
+                    <a href="https://www.youtube.com/embed/Ly4eOgvC5_w">
+                        <img src="./i.jpg" alt="">
+                        <div class="overlay">
+                            <span>Click for video link</span>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="rec1">
+                <div class="text">
+                    <div class="title">Bilyani</div>
+                    <div class="rec">
+                        <ol>
+                            <li>Wash and soak 2 cups of basmati rice in water for 30 minutes.</li>
+                            <li>In a large pot, boil water with salt, 2-3 cloves, 1 bay leaf, and a cinnamon stick. Add the soaked rice and cook until 70% done. Drain and set aside.</li>
+                            <li>In a separate pan, heat oil or ghee and sauté 2 sliced onions until golden brown. Remove half for garnish.</li>
+                            <li>Add 1 tbsp ginger-garlic paste to the pan and cook for 1 minute until aromatic.</li>
+                            <li>Add chopped tomatoes and cook until soft. Mix in 1/2 cup yogurt, turmeric, red chili powder, garam masala, and salt.</li>
+                            <li>Add marinated chicken (or mutton) to the masala and cook until the meat is tender and oil separates.</li>
+                            <li>Layer partially cooked rice over the meat mixture. Sprinkle the fried onions, fresh coriander, and mint leaves on top.</li>
+                            <li>Drizzle saffron milk (a few saffron strands soaked in warm milk) and 1 tbsp ghee over the rice for flavor and aroma.</li>
+                            <li>Cover the pot with a tight-fitting lid or seal with dough. Cook on low heat (dum) for 20–25 minutes.</li>
+                            <li>Let it rest for 10 minutes before serving. Gently mix layers and serve hot with raita or salad.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="co">
+                    <a href="https://www.youtube.com/embed/rpKOoR3Ml2I">
+                        <img src="./b.jpg" alt="">
+                        <div class="overlay">
+                            <span>Click for video link</span>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="rec1">
+                <div class="text">
+                    <div class="title">Dahi Pallay</div>
+                    <div class="rec">
+                        <ol>
+                            <li>Soak 1 cup urad dal (or moong dal) in water for 4–5 hours or overnight.</li>
+                            <li>Drain and grind the dal to a smooth batter using minimal water. Add salt and 1/2 tsp baking soda; mix well.</li>
+                            <li>Heat oil in a deep pan and fry spoonfuls of the batter until golden and puffed. Drain on paper towels.</li>
+                            <li>Soak the fried ballay in warm water for 15–20 minutes to soften them.</li>
+                            <li>Gently squeeze the soaked ballay to remove excess water and place them in a serving dish.</li>
+                            <li>In a bowl, whisk 2–3 cups of yogurt with a pinch of salt and sugar until smooth.</li>
+                            <li>Pour the whisked yogurt generously over the softened ballay.</li>
+                            <li>Sprinkle roasted cumin powder, red chili powder, chaat masala, and black salt to taste.</li>
+                            <li>Drizzle tamarind chutney and mint chutney over the top for extra flavor.</li>
+                            <li>Garnish with chopped fresh coriander and optionally some crispy papri or sev before serving.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="co">
+                    <a href="https://www.youtube.com/embed/wrT3N0ywNZ4">
+                        <img src="./d.jpg" alt="">
+                        <div class="overlay">
+                            <span>Click for video link</span>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; All rights reserved.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <h2>JOB Application</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <br />
+      <br />
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" />
+      <br />
+      <br />
+
+      <label for="tel">Contact:</label>
+      <!-- ^ and $ are signalling the start and end of input string -->
+      <input
+        type="tel"
+        id="tel"
+        pattern="^\d{4}-\d{7}$"
+        placeholder="0335-2227244"
+        required
+      />
+      <!-- <input type="tel" id="tel" pattern="^\d{11}$" placeholder="03352227244" required> -->
+      <br />
+      <br />
+
+      <label for="resume">Resume:</label>
+      <input type="file" name="resume" id="resume" />
+      <br />
+      <br />
+
+      <label for="exp">Experience(Years):</label>
+      <input type="number" id="exp" name="exp" min="3" max="20" />
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Skills:</legend>
+        <input type="checkbox" id="interest1" name="HTML" />
+        <label for="interest1">HTML</label>
+
+        <input type="checkbox" id="interest2" name="JAVA" />
+        <label for="interest2">JAVA</label>
+
+        <input type="checkbox" id="interest3" name="CSS" />
+        <label for="interest3">CSS</label>
+      </fieldset>
+      <br />
+
+      <label for="edu">Education:</label>
+      <select name="edu" id="edu">
+        <option value="MS">MS</option>
+        <option value="BS">BS</option>
+        <option value="FSC">FSC</option>
+        <option value="Self">Self</option>
+      </select>
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Availability</legend>
+        <input type="radio" name="avail" id="avail" />
+        <label for="avail">Full-time</label><br />
+        <input type="radio" name="avail" id="avail" />
+        <label for="avail">Part-time</label>
+      </fieldset>
+      <br />
+
+      <br />
+      <label for="comment">Additional Comments:</label>
+      <br />
+      <textarea name="Comments" id="comment" rows="5" cols="122"></textarea>
+      <input type="submit" value="Register" id="Register" />
+    </form>
+  </body>
+</html>

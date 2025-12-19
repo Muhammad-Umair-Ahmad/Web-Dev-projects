@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr. T</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fvectors%2Ft-logo-png&psig=AOvVaw0TJNIu4TpS8JqBQxTpAKb6&ust=1751917237081000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOix-rb-qI4DFQAAAAAdAAAAABAE"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        html {
+  scroll-behavior: smooth;
+}
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      h2 {
+        font-family: "Major Mono Display", monospace;
+        font-size: 175px;
+        font-weight: 400;
+        color: aliceblue;
+        font-style: normal;
+        text-shadow: white 0px 0px 10px;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-family: "Poiret One", sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        color: aliceblue;
+        padding-top: 10px;
+        font-style: normal;
+      }
+
+      section {
+        background-image: 
+        linear-gradient(
+            rgba(115, 49, 49, 0.3),
+            rgba(60, 38, 157, 0.3)
+          ),
+          url(./faded_gallery-OfdOEdGYiuk-unsplash\ 2.jpg);
+        display: grid;
+        place-items: center;
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        background-size: 120% auto;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .section-2 {
+        background-image: linear-gradient(
+            rgba(115, 49, 49, 0.3),
+            rgba(60, 38, 157, 0.3)
+          ),
+          url(./faded_gallery-OfdOEdGYiuk-unsplash\ 3.jpg);
+        background-size: 120% auto;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .section-2 h2,
+      .section-3 h2,
+      .section-4 h2 {
+        font-size: 125px;
+      }
+
+      .section-3 {
+        background-image: linear-gradient(
+            rgba(115, 49, 49, 0.3),
+            rgba(60, 38, 157, 0.3)
+          ),
+          url(./faded_gallery-OfdOEdGYiuk-unsplash\ 2.jpg);
+        background-size: 150% auto;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .section-4 {
+        background-image: linear-gradient(
+            rgba(115, 49, 49, 0.3),
+            rgba(60, 38, 157, 0.3)
+          ),
+          url(./faded_gallery-OfdOEdGYiuk-unsplash\ 4.jpg);
+        background-size: 120% auto;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .nav {
+        background-color: rgba(0, 0, 0, 0.083);
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* padding: 40px 40px; */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+
+        /* NEW: Fix position at top inside the section */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+      .nav-links {
+        display: flex;
+        width: 70%;
+
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .nav-links a {
+        flex: 1; /* allow each link to take equal space */
+
+        font-family: "Poiret One", sans-serif;
+        font-size: 1.1rem;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        transform: scale(1.2);
+        text-shadow: white 0px 0px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SECTION 1: Landing Page with Navbar -->
+    <section>
+      <div class="nav">
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h2>HAUZ</h2>
+        <p>Full Stack Development</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section-2" id="services">
+      <div>
+        <h2>Full Stack</h2>
+        <p>Development using</p>
+        <p>MongoDB, ExpressJs, ReactJs & NodeJs</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="section-3" id="about">
+      <div>
+        <h2>Stunning Designs</h2>
+        <p>Turning ideas into beautiful, functional websites.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="section-4" id="contact">
+      <div>
+        <h2>Contact at</h2>
+        <p><a href="mailto:iamumair244@gmail.com">iamumair244@gmail.com</a></p>
+      </div>
+    </section>
+  </body>
+</html>

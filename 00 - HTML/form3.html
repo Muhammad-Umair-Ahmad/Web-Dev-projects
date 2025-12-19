@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Complex Form</h2>
+    <form>
+        <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+<br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+<br>
+
+        <label for="tel">Phone Number:</label>
+        <!-- ^ and $ are signalling the start and end of input string -->
+        <input type="tel" id="tel" pattern="^\d{4}-\d{7}$" placeholder="0335-2227244" required>
+        <!-- <input type="tel" id="tel" pattern="^\d{11}$" placeholder="03352227244" required> -->
+<br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+<br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="gender">
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" id="gender">
+        <label for="gender">Female</label>
+<br>
+
+        <label for="country">Country:</label>
+        <select name="country" id="country" >
+              <option value="" disabled selected>Select Country</option>
+            <option value="USA">USA</option>
+            <option value="Pakistan">Pakistan</option>
+        </select>
+        <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Address Street:<input type="text" id="Street"> City:<input type="text" id="City"> State:<input type="text" id="State">
+            Zip Code: <input type="text" id="Zip">
+        </legend>
+    </fieldset>
+
+    <fieldset><legend>Other Information</legend>
+        <label for="Comments">Comments:</label>
+        <textarea name="comment" id="Comments" rows="5" cols="50"></textarea>
+        <input type="checkbox" id="terms">
+        <label for="terms">I agree with terms of service</label>
+    </fieldset>
+    <input type="submit" id="submit" value="Submit">
+    </form>
+
+</body>
+</html>

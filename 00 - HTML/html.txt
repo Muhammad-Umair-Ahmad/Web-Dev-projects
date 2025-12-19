@@ -1,0 +1,29 @@
+- HTML tags -
+            (Check thapa Pdf for more ref)
+    strong
+    em
+    u
+    s 
+    sub
+    sup
+    pre
+    kbd
+    abbr
+    mark
+    small
+    del
+
+
+    -a tag-
+        href for basic link
+        target="_blacnk" open the given link in next page
+        title in anchor show mini title of whats in the link depending on whats given
+        download: href will have the path of the file and simply write download <href = "path" download>
+
+
+        (check entities from pdf)
+    -img tag-
+        title: provide the name of the image if you hover over th img
+        loading lazy: th imgae will not be loaded as long as you dont reach that plae in the website
+
+    -map
